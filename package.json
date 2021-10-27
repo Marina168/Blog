@@ -1,0 +1,13 @@
+{
+  "name": "tema-de-casa-marina168-master",
+  "version": "1.0.0",
+  "main": "index.js",
+  "start": "node index.ejs",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.ejs"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}

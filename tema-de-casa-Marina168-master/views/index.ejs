@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="stil.css">
+  <script src='@(Url.Content("path of js"))' type="functions"></script>
+</head>
+<br><br><br>
+<body>
+<h1>Lasă aici un gând bun...</h1>
+
+<div class="container">
+
+    <form action="/idei" method='POST'>
+  
+      <label for="fname">Nume</label>
+      <br>
+      <input type="text" id="fname" name="firstname" placeholder="Numele tau..">
+      <br>
+  
+      <label for="subject">Subiect</label>
+      <br>
+      <textarea id="subject" name="subject" placeholder="Scrie ceva.." style="height:200px"></textarea>
+      <br>
+    <a href='/i'>Posteaza</a>
+   </form>
+   <br><br>
+
+   <div id="comments" class="card">
+     <% results.forEach(function(results){ %>
+      <div>
+        <h5><%=results.Name%></h5>
+        <br>
+        <h4><%=results.Comment%></h4>
+      </div>
+      <%})%>
+    </div>
+
+</body>
+  

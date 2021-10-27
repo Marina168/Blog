@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<head>
+  <link rel="stylesheet" href="stil.css">
+</head>
+<br><br>
+
+<% if (username !== 0)
+{%>
+  <h1>Lasă aici un gând bun...</h1>
+  <p class="errormsg"><%=errorMsg%></p>
+  <div class="verificare">
+  <form id ="form" method="POST" action="/verifica-autentificare">
+    <label>User:</label>
+    <input name="username" >
+  </p>
+  <p>
+    <label>Password:</label>
+    <input type="password" name="password" >
+  </p>
+  <p>
+    <input id ="login" type="submit" value="Login">
+  </p>
+</div>
+<br><br><br>
+</form>
+<%}%>
+
+  

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<% if(results !== 0 )
+{%>
+<div class="container">
+    <form id="idform" >
+      <label for="fname">Nume</label>
+      <br>
+      <input type="text" id="fname" name="firstname" placeholder="Numele tau..">
+      <br>
+  
+      <label for="subject">Subiect</label>
+      <br>
+      <textarea id="subject" name="subject" placeholder="Scrie ceva.." style="height:200px"></textarea>
+      <br>
+      <input id="posteaza" type="submit" value="Posteaza" onclick="insertComment()">
+    
+   </form>
+   <br><br>
+  
+   <div id="comments" class="card">
+    <% results.forEach(function(results){ %>
+      <div>
+          <h5><%=results.name%><span> spune:</span> </h5>
+          <h6><%=results.comment%></h6>
+      </div>
+    <%})%>
+<%}%>
+<br><br><br>
+</div>
+</html>
